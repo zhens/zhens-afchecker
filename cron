@@ -1,6 +1,4 @@
-03-59/5 * * * * cd ~/AFChecker && python AFMenAlerter.py
-03-59/5 * * * * cd ~/AFChecker && python AFWomenAlerter.py
-03-59/5 * * * * cd ~/AFChecker && python HollisterAlerter.py
+03-59/5 * * * * cd ~/AFChecker && python AFAlerter.py
 04-59/5 0-2,11-23 * * * cd ~/AFChecker && python AFPostman.py
 01-59/5 * * * * cd ~/AFChecker && python AFDownloader.py
 0 */2 * * * cd ~/AFChecker && python AFDataFileCleaner.py

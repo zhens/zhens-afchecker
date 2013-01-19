@@ -27,7 +27,7 @@ def SendAndCleanAlertList(email_list_file, alert_file, email_title):
     email_list = open(email_list_file, 'r')
     alerts = open(alert_file, 'r')
     alert_content = alerts.read()
-    if len(alert_content.strip()) >= 100:
+    if len(alert_content.strip()) > 0:
         msg = MIMEText(EMAIL_TEMPLATE % alert_content, 'html')
         now = datetime.datetime.now()
         date_string = '%d/%d' % (now.month, now.day)

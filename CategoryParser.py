@@ -42,7 +42,7 @@ class CategoryParser(object):
                 if re.search('<span class="name">', line):
                     expected = 'Name'
             elif expected == 'Name':
-                m = re.search('<a href="(.*)">(.*)</a>', line)
+                m = re.search('<a href="(.*)".*>(.*)</a>', line)
                 if m:
                     item['Name'] = m.group(2)
                     item['Link'] = m.group(1)
