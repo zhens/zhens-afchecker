@@ -28,7 +28,10 @@ class ItemPageParser(object):
     def GetItemDetail(self):
         item_seq = []
         for i in range(1, self._seq + 1):
-            item_seq.append(
-                json.loads(urllib.urlopen(self._url_tpl % i).read()))
+            try:
+                item_seq.append(
+                    json.loads(urllib.urlopen(self._url_tpl % i).read()))
+            except ValueError:
+                print "Skipping for URL error: %s" % self._url_tpl
         return item_seq
 
